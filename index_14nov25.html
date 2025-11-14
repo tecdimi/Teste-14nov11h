@@ -1,0 +1,153 @@
+<!-- FINAL CLEAN VERSION: fixed headers, compact logos grid, no text/moldura -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dimitri Oliveira — Landing Page (PT/EN)</title>
+  <meta name="description" content="Executivo de Contas | Cibersegurança, Cloud & Network Solutions — Portfolio, serviços e contato." />
+  <meta property="og:title" content="Dimitri Oliveira — Cybersecurity, Cloud & Network" />
+  <meta property="og:description" content="Executivo de Contas | Cibersegurança, Cloud & Network Solutions." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#1f66f0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{ --brand:#1f66f0; --ink:#0b1220; --muted:#667085; --bg:#ffffff; --card:#ffffff;
+           --shadow:0 10px 30px rgba(3,9,30,.08); --radius:18px;
+           --header-h:112px; --catbar-h:56px; --top-spacer:20px; }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--ink);
+      font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      letter-spacing:.1px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+      padding-top:calc(var(--header-h) + var(--catbar-h) + var(--top-spacer));}
+    a{color:var(--brand);text-decoration:none}
+    .container{width:min(1120px,92vw);margin-inline:auto}
+    header{position:fixed;top:0;left:0;right:0;z-index:1000;
+      backdrop-filter:saturate(180%) blur(6px);background:rgba(255,255,255,.94);}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand-mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(140deg, var(--brand), #3f86ff 60%, #6aa2ff);box-shadow:inset 0 0 0 2px rgba(255,255,255,.3),0 6px 18px rgba(31,102,240,.35)}
+    .brand-info{display:flex;flex-direction:column;gap:2px}
+    .brand-name{font-weight:800;letter-spacing:.4px}
+    .brand-role,.brand-area{color:var(--muted)}
+    .nav .right{display:flex;align-items:center;gap:10px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:10px 14px;border-radius:12px;border:1px solid transparent;background:var(--brand);color:#fff;font-weight:600;box-shadow:var(--shadow);cursor:pointer;transition:transform .15s ease, box-shadow .15s ease}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 14px 34px rgba(3,9,30,.12)}
+    .btn.langbtn .flag{font-size:16px;line-height:1}
+    .catbar{position:fixed;top:var(--header-h);left:0;right:0;z-index:900;background:#000;color:#fff;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);}
+    .catbar .wrap{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap}
+    .pill{color:#fff;font-weight:700;padding:10px 14px;border-radius:999px;border:1px solid transparent;transition:color .15s ease, background-color .15s ease, border-color .15s ease;}
+    .pill.active{color:#4da3ff;background:transparent}
+    .pill:hover{color:#4da3ff;background:transparent}
+    .hero-media{background:#ffffff;padding-top:18px}
+    .content-panel{width:100%;min-height:340px;border-radius:18px;background:#ffffff;border:1px solid rgba(0,0,0,.08);box-shadow:var(--shadow);padding:24px;}
+    section{padding:64px 0}
+    .section-title{font-size:clamp(22px, 3vw, 36px);margin:0 0 12px;font-weight:800}
+    .section-sub{color:var(--muted);max-width:70ch}
+    .grid{display:grid;gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(3, 1fr)}
+    .card{background:var(--card);border:1px solid rgba(11,18,32,.10);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    footer{padding:40px 0 70px;color:var(--muted)}
+    .foot{display:flex;gap:24px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+    /* FABRICANTES */
+    .vendors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .vendor-card{display:flex;align-items:center;gap:16px;background:transparent;border:0;box-shadow:none;padding:10px 12px}
+    .vendor-logo{flex:0 0 160px;height:64px;display:flex;align-items:center;justify-content:center;background:transparent;border:0;box-shadow:none;overflow:hidden}
+    .vendor-logo img{max-height:56px;max-width:100%;width:auto;object-fit:contain;background:transparent;border:0;box-shadow:none}
+    .vendor-body{display:none !important}
+    @media (max-width:960px){.vendors{grid-template-columns:1fr}.vendor-logo{flex-basis:120px;height:56px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div class="brand-info">
+          <div class="brand-name">Dimitri Oliveira</div>
+          <div class="brand-role">Executivo de Contas/Negócios - Vendas B2B de TI para Setor Privado e Público</div>
+          <div class="brand-area">Cibersegurança • Cloud • Network • Educação/Treinamento</div>
+        </div>
+      </div>
+      <div class="right">
+        <button class="btn langbtn" data-lang="pt-BR"><span class="flag">🇧🇷</span> <span>Português</span></button>
+        <button class="btn langbtn" data-lang="en"><span class="flag">🇺🇸</span> <span>English</span></button>
+        <a class="btn" href="#contact">Contato</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="mega-hero" style="padding:0;margin:0;">
+      <div class="catbar">
+        <div class="container wrap">
+          <a class="pill" href="#sobre">Sobre o Site</a>
+          <a class="pill" href="#fabricantes">Fabricantes</a>
+          <a class="pill" href="#ciber">CiberSegurança</a>
+          <a class="pill" href="#si">Segurança da Informação</a>
+          <a class="pill" href="#cloud">Cloud</a>
+          <a class="pill" href="#network">Network</a>
+          <a class="pill" href="#mlai">ML/AI</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="container">
+          <div id="content-panel" class="content-panel"></div>
+        </div>
+      </div>
+    </section>
+
+    <template id="tpl-sobre">
+      <h2 class="section-title" style="margin-top:0">Sobre o Site</h2>
+      <p class="section-sub">Descrição em preparação.</p>
+    </template>
+
+    <template id="tpl-fabricantes">
+      <h2 class="section-title" style="margin-top:0">Fabricantes</h2>
+      <p class="section-sub">Seleção de parceiros e plataformas com os quais trabalho.</p>
+      <div class="vendors" style="margin-top:18px">
+        <article class="vendor-card"><div class="vendor-logo"><img loading="lazy" src="assets/vendors/Fortinet.png" alt=""></div></article>
+        <article class="vendor-card"><div class="vendor-logo"><img loading="lazy" src="assets/vendors/Cisco.png" alt=""></div></article>
+        <article class="vendor-card"><div class="vendor-logo"><img loading="lazy" src="assets/vendors/Microsoft.png" alt=""></div></article>
+        <article class="vendor-card"><div class="vendor-logo"><img loading="lazy" src="assets/vendors/AWS.jpeg" alt=""></div></article>
+        <article class="vendor-card"><div class="vendor-logo"><img loading="lazy" src="assets/vendors/PaloAlto.png" alt=""></div></article>
+        <article class="vendor-card"><div class="vendor-logo"><img loading="lazy" src="assets/vendors/F5.svg" alt=""></div></article>
+        <article class="vendor-card"><div class="vendor-logo"><img loading="lazy" src="assets/vendors/AppDynamics.jpeg" alt=""></div></article>
+        <article class="vendor-card"><div class="vendor-logo"><img loading="lazy" src="assets/vendors/Nutanix.png" alt=""></div></article>
+        <article class="vendor-card"><div class="vendor-logo"><img loading="lazy" src="assets/vendors/NetApp.png" alt=""></div></article>
+        <article class="vendor-card"><div class="vendor-logo"><img loading="lazy" src="assets/vendors/Extreme.png" alt=""></div></article>
+        <article class="vendor-card"><div class="vendor-logo"><img loading="lazy" src="assets/vendors/Tenable.png" alt=""></div></article>
+        <article class="vendor-card"><div class="vendor-logo"><img loading="lazy" src="assets/vendors/Veeam.jpeg" alt=""></div></article>
+      </div>
+    </template>
+  </main>
+  <footer>
+    <div class="container foot">
+      <div><div style="font-weight:700">Dimitri Oliveira</div>
+        <div class="section-sub" style="margin-top:6px">Account Manager | Cybersecurity • Cloud • Networks</div></div>
+      <div class="section-sub">© <span id="year"></span> — Todos os direitos reservados</div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent=new Date().getFullYear();
+    (function(){
+      const panel=document.getElementById('content-panel');
+      const tabs=document.querySelectorAll('.catbar .pill');
+      const map={'#sobre':'tpl-sobre','#fabricantes':'tpl-fabricantes'};
+      function render(hash){
+        const id=map[hash]||'tpl-fabricantes';
+        const tpl=document.getElementById(id);
+        if(tpl&&panel){panel.innerHTML=tpl.innerHTML;}
+        tabs.forEach(a=>a.classList.toggle('active',a.getAttribute('href')===hash));
+      }
+      tabs.forEach(a=>a.addEventListener('click',e=>{
+        e.preventDefault();const hash=a.getAttribute('href');
+        history.replaceState(null,'',hash);render(hash);
+        panel.scrollIntoView({behavior:'smooth',block:'start'});}));
+      render('#fabricantes');
+    })();
+  </script>
+</body>
+</html>
